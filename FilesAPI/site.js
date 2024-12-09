@@ -1,6 +1,10 @@
 ﻿window.onload = function () {
     const reader = new FileReader();
 
+    $(document).on('dragover drop', function (event) {
+        event.preventDefault();
+    });
+
     $("#drag_div").on("dragenter", function (event) {
         document.getElementById("drag_div").style.border = `3px dashed #CCCCCC`;
     });
